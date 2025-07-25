@@ -1,0 +1,116 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #3f48af;
+}
+.menu{
+    width: 12vw;
+    display: flex;
+    aspect-ratio: 1/1;
+    flex-direction: column;
+    gap: 12%;
+    justify-content: center;
+    cursor: pointer;
+}
+
+span{
+    width: 100%;
+    height: 10%;
+    background-color: white;
+    border-radius: 6px;
+}
+
+.linelower{
+    animation: buttonRev 700ms ease-in-out backwards;
+}
+
+@keyframes buttonRev{
+    0%{
+        transform: translateY(-225%) rotate(135deg);
+    }
+    50%{
+        transform: translateY(-225%);
+    }
+    100%{
+        transform: translateY(0%);
+    }
+}
+
+.linecenter{
+    animation: centerRev 700ms ease-in-out forwards;
+}
+
+@keyframes centerRev{
+    0%,50%{scale: 0}
+    100%{scale: 1}
+}
+
+.linetop{
+    animation: topRev 700ms ease-in-out forwards;
+}
+
+@keyframes topRev{
+    0%{transform: translateY(225%) rotate(45deg);}
+    50%{
+        transform: translateY(225%);
+    }
+    100%{
+        transform: translateY(0%);
+    }
+
+}
+
+.top{
+    animation: top 700ms ease-in-out forwards;
+}
+@keyframes top{
+    0%{
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: translateY(225%);
+    }
+    100%{
+        transform: translateY(225%) rotate(45deg);
+    }
+}
+
+.center{
+    animation:center 700ms ease-in-out forwards;
+}
+
+@keyframes center{
+    0%{
+        scale:1;
+    }
+    50%,100%{
+        scale:0
+    }
+}
+
+.lower{
+    animation: lower 700ms ease-in-out forwards;
+}
+
+@keyframes lower{
+    0%{
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: translateY(-225%);
+    }
+    100%{
+        transform: translateY(-225%) rotate(135deg);
+    }
+}
+
+.navbar{
+    background-color: aliceblue;
+    display: none;
+    padding: 10px;
+}
