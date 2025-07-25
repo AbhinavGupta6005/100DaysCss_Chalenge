@@ -1,0 +1,141 @@
+* {
+  padding: 0;
+  margin: 0;
+  color: #786450;
+}
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(171, 219, 227);
+}
+
+.container {
+  background-color: aliceblue;
+  width: 500px;
+  aspect-ratio: 1/1;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: 0.65fr 0.35fr;
+  box-shadow: 10px 10px 24px rgba(0, 0, 0, 0.4);
+}
+
+.left {
+  height: 80%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  margin: auto;
+
+  .photo {
+    height: 130px;
+    width: 130px;
+    background-image: url("https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-size: cover;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+  }
+
+  .photo::before {
+    content: "";
+    position: absolute;
+    width: 140px;
+    height: 140px;
+    border: 1px solid;
+    border-color: #786450 #786450 #786450 transparent;
+    border-radius: 50%;
+    transition: all 1.5s ease-in-out;
+    top: -6px;
+    left: -6px;
+  }
+
+  .photo:hover::before {
+    transform: rotateZ(360deg);
+  }
+
+  .photo::after {
+    content: "";
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    border: 1px solid;
+    border-color: #786450 transparent #786450 #786450;
+    border-radius: 50%;
+    transition: all 1.5s ease-in-out;
+    top: -11.5px;
+    left: -11.5px;
+  }
+
+  .photo:hover::after {
+    transform: rotatez(-360deg);
+  }
+
+  .name {
+    text-align: flex;
+    margin-bottom: 10%;
+    font-size: 1.3rem;
+  }
+
+  .links {
+    display: flex;
+    flex-direction: column;
+    height: 30%;
+    width: 55%;
+    gap: 10%;
+  }
+
+  .link {
+    height: 40%;
+    border: 2px solid #786450;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3rem;
+  }
+  .link:hover {
+    background-color: rgb(171, 219, 227);
+    color: black;
+    cursor: pointer;
+    transition: 500ms ease-in-out;
+  }
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+
+  .info {
+    background-color: #f5e8df;
+    height: 33.3%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    cursor: pointer;
+    flex-direction: column;
+    transition: 500ms ease-in-out;
+    border-top: 1px solid white;
+  }
+
+  .info span {
+    font-size: 1.8rem;
+    font-weight: 800;
+  }
+
+  .info:hover {
+    background-color: #d6c6bb;
+    color: white;
+  }
+
+  .info:first-child {
+    border-radius: 0 10px 0 0;
+  }
+  .info:last-child {
+    border-radius: 0 0 10px 0;
+  }
+}
