@@ -1,0 +1,246 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.conatiner{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 400px;
+    width: 400px;
+    background: #394568;
+    margin-top: -200px;
+    margin-left: -200px;
+    color: #394568;
+    font-weight: 300;
+    overflow: hidden;
+}
+
+.moon{
+    position: absolute;
+    height: 67px;
+    width: 67px;
+    background-color: #f6edbd;
+    border-radius: 50%;
+    left: 55px;
+    top: 45px;
+    overflow: hidden;
+    box-shadow: 0 0 10px 0 #f6edbd;
+    animation: rise 1s ease-in-out ;
+}
+
+@keyframes rise {
+    from{
+        transform: translate(-20px, 200px);
+    }
+    to{
+        transform: translate(0,0);
+    }
+}
+
+.createOne,.createTwo,.createThree,.createFour,.createFive,.createSix{
+    position: absolute;
+    background-color: #ece1a8;
+    border-radius: 50%;
+    top: 9px;
+}
+
+.createOne,.createTwo,.createThree,.createFour,.createFive,.createSix{
+    width: 11px;
+    height: 11px;
+}
+
+.createOne{
+    top: 24px;
+    left: 42px;
+}
+
+.createTwo{
+    top: 12px;
+    left: 0;
+}
+
+.createThree{
+    top: 50px;
+    left: 10px;
+}
+.createFour{
+    top: 40px;
+    left: 50px;
+}
+.createFive{
+    top: 20px;
+    left: 20px;
+}
+.createSix{
+    top: 0px;
+    left: 22px;
+}
+
+.backHillOne,
+.backHillTwo{
+    position: absolute;
+    z-index: 2;
+    width: 337px;
+    height: 281px;
+    background-color: #26314f;
+    top: 201px;
+    left: -57px;
+    border-radius: 50%;
+}
+
+.backHillTwo{
+    top: 197px;
+    left: 197px;
+}
+
+.frontHillOne,
+.frontHillTwo,
+.frontHillThree{
+    position: absolute;
+    background-color: #303c5d;
+    height: 280px;
+    width: 335px;
+    top: 240px;
+    left: -135px;
+    z-index: 2;
+    border-radius: 50%;
+}
+
+.frontHillTwo{
+    top: 220px;
+
+    left: 63px;
+}
+
+.frontHillThree{
+    top: 220px;
+    left: 290px;
+}
+
+.dropLargeOne,
+.dropLargeTwo,
+.dropLargeThree,
+.dropLargeFour,
+.dropLargeFive{
+    position: absolute;
+    background-color: #7fc1f9;
+    width: 8px;
+    height: 8px;
+    bottom: 90px;
+    z-index: 20;
+    border-radius: 50%;
+    transform-origin: 50% 100%;
+    animation-fill-mode: both;
+}
+
+.dropLargeOne{
+    left: 00px;
+    animation: drop 0.8s linear 0.3s infinite;
+}
+.dropLargeTwo{
+    left: 100px;
+    animation: drop 0.7s linear 0.2s infinite;
+}
+.dropLargeThree{
+    left: 200px;
+    animation: drop 0.6s linear 0.4s infinite;
+}
+.dropLargeFour{
+    left: 300px;
+    animation: drop 0.5s linear 0.6s infinite;
+}
+.dropLargeFive{
+    left: 380px;
+    animation: drop 0.3s linear 0.8s infinite;
+}
+
+.dropMediumOne,
+.dropMediumTwo,
+.dropMediumThree,
+.dropMediumFour,
+.dropMediumFive{
+    position: absolute;
+    z-index: 20;
+    opacity: 0.6;
+    background: #7fc1f9;
+    width: 6px;
+    height: 6px;
+    bottom: 90px;
+    transform-origin: 50% 100%;
+    animation-fill-mode: both;
+    border-radius: 50%;
+}
+
+.dropMediumOne{
+    left: 220px;
+    animation: drop 1.4s linear 0.5s infinite;
+}
+.dropMediumTwo{
+    left: 320px;
+    animation: drop 1.6s linear 0.7s infinite;
+}
+.dropMediumThree{
+    left: 150px;
+    animation: drop 1.9s linear 0.9s infinite;
+}
+.dropMediumFou{
+    left: 80px;
+    animation: drop 1s linear 0.6s infinite;
+}
+.dropMediumOne{
+    left: 70px;
+    animation: drop 1.2s linear 0.1s infinite;
+}
+
+.dropSmallOne,
+.dropSmallTwo,
+.dropSmallThree,
+.dropSmallFive,
+.dropSmallFour{
+    position: absolute;
+    z-index: 20;
+    opacity: 0.6;
+    background: #7fc1f9;
+    width: 4px;
+    height: 4px;
+    bottom: 90px;
+    transform-origin: 50% 100%;
+    animation-fill-mode: both;
+    border-radius: 50%;
+}
+
+.dropSmallOne{
+    left: 120px;
+    animation: drop 1.1s linear 0.1s infinite;
+}
+.dropSmallTwo{
+    left: 20px;
+    animation: drop 1.4s linear 0.5s infinite;
+}
+.dropSmallThree{
+    left: 320px;
+    animation: drop 1.7s linear 0.3s infinite;
+}
+.dropSmallFour{
+    left: 230px;
+    animation: drop 1.9s linear 0.6s infinite;
+}
+.dropSmallFive{
+    left: 280px;
+    animation: drop 1.8s linear 0.8s infinite;
+}
+
+@keyframes drop{
+    0%{
+        transform: translate3d(40px, -320px, 0) scaleX(1) scaleY(1) rotate(17deg);
+    }
+    85%{
+        transform: translate3d(0, 0, 0) scaleX(1) scaleY(1) rotate(17deg);
+    }
+
+    100%{
+        transform: translate3d(0,0,0) scaleX(3) scaleY(1) rotate(17deg);
+    }
+}
