@@ -47,8 +47,8 @@ body{
 {
     width: 150px;
     height: 128px;
-    background-image: url("https://www.shutterstock.com/shutterstock/photos/2544628907/display_1500/stock-photo-png-stylish-sneakers-isolated-on-white-background-2544628907.jpg");
-    background-size: contain;
+    background-image: url("shoes.png");
+    background-size: cover;
     position: absolute;
     right: 0;
     bottom: 0;
