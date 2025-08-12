@@ -1,0 +1,55 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: blueviolet;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.container .loader{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0 20px;
+}
+
+.loader .loading{
+    background-color: #fff;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    margin: 0 10px;
+    animation: animate 0.8s all ease infinite;
+}
+
+@keyframes animate{
+    0%{
+        width: 30px;
+        height: 30px;
+    }
+    50%{
+        width: 20px;
+        height: 20px;
+    }
+
+}
+
+.loader .loading.one{
+    animation-delay: 0.3s;
+}
+.loader .loading.two{
+    animation-delay: 0.5s;
+}
+.loader .loading.three{
+    animation-delay: 0.7s;
+}
+.loader .loading.four{
+    animation-delay: 0.9s;
+}
