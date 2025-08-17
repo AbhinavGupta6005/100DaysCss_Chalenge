@@ -1,0 +1,11 @@
+body{
+    background-color: crimson;
+}
+::-webkit-scrollbar{
+    background-color: transparent;
+    width: 10px;
+}
+::-webkit-scrollbar-thumb{
+    background: linear-gradient(red,yellow,white);
+    border-radius: 20px;
+}
