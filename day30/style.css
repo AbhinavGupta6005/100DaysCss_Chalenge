@@ -1,0 +1,75 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: black;
+    display: grid;
+    place-items: center;
+}
+.container{
+    position: relative;
+    height: 400px;
+    width: 400px;
+    /* background-color: grey; */
+    display: grid;
+    place-items: center;
+}
+.rect{
+    position: absolute;
+    border: 1px solid white;
+}
+.rc1{
+    height: 200px;
+    width: 200px;
+    animation: rotate 2s ease-in-out 0.033s alternate infinite;
+}
+.rc3{
+    height: 190px;
+    width: 190px;
+    animation: rotate 2s ease-in-out 0.062s alternate infinite;
+}
+.rc4{
+    height: 180px;
+    width: 180px;
+    animation: rotate 2s ease-in-out 0.064s alternate infinite;
+}
+.rc5{
+    height: 170px;
+    width: 170px;
+    animation: rotate 2s ease-in-out 0.066s alternate infinite;
+}
+.rc6{
+    height: 160px;
+    width: 160px;
+    animation: rotate 2s ease-in-out 0.068s alternate infinite;
+}
+.rc7{
+    height: 150px;
+    width: 150px;
+    animation: rotate 2s ease-in-out 0.070s alternate infinite;
+}
+.rc8{
+    height: 140px;
+    width: 140px;
+    animation: rotate 2s ease-in-out 0.072s alternate infinite;
+}
+.rc9{
+    height: 130px;
+    width: 130px;
+    animation: rotate 2s ease-in-out 0.074s alternate infinite;
+}
+.rc10{
+    height: 120px;
+    width: 120px;
+    animation: rotate 2s ease-in-out 0.078s alternate infinite;
+}
+
+@keyframes rotate{
+    from{
+        transform: rotate(0deg) translate3d(0,0,0);
+    }
+    to{
+        transform: rotate(360deg) translate3d(0,0,0);
+    }
+}
