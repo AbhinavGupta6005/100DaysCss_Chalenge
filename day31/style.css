@@ -1,0 +1,78 @@
+.wrap{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+.button{
+    height: 60px;
+    width: 300px;
+    font-size: 22px;
+    letter-spacing: 1.2px;
+    font-weight: 700;
+    color: #313133;
+    border: none;
+    background-color: #4fd1c5;
+    outline: none;
+    cursor: pointer;
+    border-radius: 100px;
+    box-shadow: 12px 12px 24px rgba(79,209,197,0.64);
+    position: relative;
+    transition: all 0.3s ease-in-out 0s;
+}
+.button::before{
+    content: "";
+    width: 300px;
+    height: 60px;
+    border: 6px solid #00ffcb;
+    position: absolute;
+    border-radius: 100px;
+    top: 50%;
+    left: 50%;
+    box-shadow: 0 0 60px rgba(0,255,203,0.64);
+    transform: translate(-50%,-50%);
+    opacity: 0;
+    transition: all 0.3s ease-in-out 0s;
+}
+.button:hover, .button:focus{
+    color: #313133;
+    transform: translateY(-6px);
+}
+.button:hover::before, button:focus::before{
+    opacity: 1;
+}
+
+button::after{
+    content: "";
+
+    width: 30px;
+    height: 30px;
+    border: 6px solid #00ffcb;
+    border-radius: 100%;
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    animation: ring 1.5s infinite;
+}
+
+button:hover::after, button:focus::after{
+    animation: none;
+    opacity: 0;
+    display: none;
+}
+
+@keyframes ring{
+    0%{
+        width: 30px;
+        height: 30px;
+        opacity: 1;
+    }
+    100%{
+        width: 300px;
+        height: 300px;
+        opacity: 0;
+    }
+}
