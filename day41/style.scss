@@ -1,0 +1,57 @@
+body{
+    background-color: black;
+}
+.triangle{
+    position: absolute;
+    // background-color: red;
+    height: 300px;
+    width: 300px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-20px, -20px);
+}
+
+.square{
+    height: 38px;
+    width: 38px;
+    border: 1px solid #fa0;
+    position: absolute;
+    top: 0;
+
+    @for $i from 0 through 40{
+        &:nth-child(#{$i}){
+            left: ($i * 6px) - 142px;   
+            top: 100px;
+        }
+    }
+    @for $i from 41 through 80{
+        &:nth-child(#{$i}){
+            left: ($i * -3px) +220px;   
+            top: ($i * -5px) +300px;
+        }
+    }
+    @for $i from 81 through 120{
+        &:nth-child(#{$i}){
+            right: ($i * 3px) - 260px;   
+            top: ($i * -5px) -500px;
+        }
+    }
+
+    @for $i from 0 through 120{
+        &:nth-child(#{$i}){
+            animation: 20s linear $i * 0.5s infinite rotate;
+            animation-delay: -0.3s * $i;
+            filter:  hue-rotate(3deg * $i);
+        }
+    }
+}
+
+@keyframes rotate{
+    0%{
+        transform: rotate(0deg);
+
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
