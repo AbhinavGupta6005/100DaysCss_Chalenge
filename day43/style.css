@@ -1,0 +1,245 @@
+:root {
+  --box-size: 2px;
+}
+
+.frame {
+  position: absolute;
+  height: 400px;
+  width: 400px;
+  background: #222222;
+  margin-top: -200px;
+  margin-left: -200px;
+  left: 50%;
+  top: 50%;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.box {
+  --delay:0;
+  border: 1px #888 solid;
+  height: var(--box-size);
+  width: var(--box-size);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #222222;
+  animation: rotate 5s ease-in-out var(--delay) infinite alternate both, radius 2.5s ease-in-out var(--delay) infinite alternate both;
+}
+
+.box-0 {
+  --delay: 0s;
+}
+
+.box-1 {
+  --delay: 0.05s;
+}
+
+.box-2 {
+  --delay: 0.1s;
+}
+
+.box-3 {
+  --delay: 0.15s;
+}
+
+.box-4 {
+  --delay: 0.2s;
+}
+
+.box-5 {
+  --delay: 0.25s;
+}
+
+.box-6 {
+  --delay: 0.3s;
+}
+
+.box-7 {
+  --delay: 0.35s;
+}
+
+.box-8 {
+  --delay: 0.4s;
+}
+
+.box-9 {
+  --delay: 0.45s;
+}
+
+.box-10 {
+  --delay: 0.5s;
+}
+
+.box-11 {
+  --delay: 0.55s;
+}
+
+.box-12 {
+  --delay: 0.6s;
+}
+
+.box-13 {
+  --delay: 0.65s;
+}
+
+.box-14 {
+  --delay: 0.7s;
+}
+
+.box-15 {
+  --delay: 0.75s;
+}
+
+.box-16 {
+  --delay: 0.8s;
+}
+
+.box-17 {
+  --delay: 0.85s;
+}
+
+.box-18 {
+  --delay: 0.9s;
+}
+
+.box-19 {
+  --delay: 0.95s;
+}
+
+.box-20 {
+  --delay: 1s;
+}
+
+.box-21 {
+  --delay: 1.05s;
+}
+
+.box-22 {
+  --delay: 1.1s;
+}
+
+.box-23 {
+  --delay: 1.15s;
+}
+
+.box-24 {
+  --delay: 1.2s;
+}
+
+.box-25 {
+  --delay: 1.25s;
+}
+
+.box-26 {
+  --delay: 1.3s;
+}
+
+.box-27 {
+  --delay: 1.35s;
+}
+
+.box-28 {
+  --delay: 1.4s;
+}
+
+.box-29 {
+  --delay: 1.45s;
+}
+
+.box-30 {
+  --delay: 1.5s;
+}
+
+.box-31 {
+  --delay: 1.55s;
+}
+
+.box-32 {
+  --delay: 1.6s;
+}
+
+.box-33 {
+  --delay: 1.65s;
+}
+
+.box-34 {
+  --delay: 1.7s;
+}
+
+.box-35 {
+  --delay: 1.75s;
+}
+
+.box-36 {
+  --delay: 1.8s;
+}
+
+.box-37 {
+  --delay: 1.85s;
+}
+
+.box-38 {
+  --delay: 1.9s;
+}
+
+.box-39 {
+  --delay: 1.95s;
+}
+
+.box-40 {
+  --delay: 2s;
+}
+
+.box-41 {
+  --delay: 2.05s;
+}
+
+.box-42 {
+  --delay: 2.1s;
+}
+
+.box-43 {
+  --delay: 2.15s;
+}
+
+.box-44 {
+  --delay: 2.2s;
+}
+
+.box-45 {
+  --delay: 2.25s;
+}
+
+.box-46 {
+  --delay: 2.3s;
+}
+
+.box-47 {
+  --delay: 2.35s;
+}
+
+.box-48 {
+  --delay: 2.4s;
+}
+
+.box-49 {
+  --delay: 2.45s;
+}
+
+@keyframes rotate {
+  0% {
+    transform: translate(-50%, 50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, 50%) rotate(720deg);
+  }
+}/*# sourceMappingURL=style.css.map */

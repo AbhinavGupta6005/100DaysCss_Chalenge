@@ -1,0 +1,87 @@
+$border-color: #888;
+$bg: #222222;
+
+:root{
+    --box-size: 2px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    background: $bg;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.frame{
+    position: absolute;
+    height: 400px;
+    width: 400px;
+    background: $bg;
+    margin-top: -200px;
+    margin-left: -200px;
+    left: 50%;
+    top: 50%;
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.center{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.box{
+    --delay:0;
+    border: 1px $border-color solid;
+    height: var(--box-size);
+    width: var(--box-size);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: $bg;
+    animation: rotate 5s ease-in-out var(--delay) infinite alternate both, radius 2.5s ease-in-out var(--delay) infinite alternate both;
+
+}
+
+@for $i from 0 to 50{
+    .box-#{$i}{
+        --delay: #{$i * 0.05s};
+        $color: 20 + ($i * 5);
+        $size: calc(var(--box-size)+ (#{$i}px * 6));
+        width: $size;
+        height: $size;
+        border-color: rgb($color, $color, $color);
+        border-radius: 0;
+        z-index: -$i;
+    }
+}
+
+@keyframes rotate{
+    0%{
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100%{
+        transform: translate(-50%, 50%) rotate(720deg);
+    }
+}
+
+@keyframes radius{
+    from{
+        border-radius: 0%;
+    }
+    to{
+        border-radius: 45%;
+    }
+}
