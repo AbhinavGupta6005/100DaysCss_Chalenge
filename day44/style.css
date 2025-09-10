@@ -1,0 +1,4 @@
+body {
+  background: repeating-radial-gradient(circle at bottom left, #fedc00 0, #fedc00 5.5555555556%, #fcb712 0, #fedc00 11.1111111111%, red 16.6666666667%, green 0, blue 22.2222222222%), repeating-radial-gradient(circle at bottom right, #fedc00 0, #fedc00 5.5555555556%, #fcb712 0, #fedc00 11.1111111111%, red 16.6666666667%, green 0, blue 22.2222222222%);
+  background-blend-mode: overlay;
+}/*# sourceMappingURL=style.css.map */

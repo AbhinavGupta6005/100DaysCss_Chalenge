@@ -1,0 +1,14 @@
+$color: #fedc00 0,
+ #fedc00 1/18 * 100%,
+ #fcb712 0,
+ #fedc00 2/18 * 100%,
+ red 3/18 * 100%,
+ green 0,
+ blue 4/18 * 100%;
+
+
+body{
+    background: repeating-radial-gradient(circle at bottom left, $color),
+    repeating-radial-gradient(circle at bottom right, $color);
+    background-blend-mode: overlay;
+}
