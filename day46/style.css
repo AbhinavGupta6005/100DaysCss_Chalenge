@@ -1,0 +1,86 @@
+/* *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} */
+
+body{
+    /* height: 100vh;
+    width: 100%; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+}
+
+/* .container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    height: 400px;
+    width: 400px;
+} */
+
+.snow{
+    color: white;
+    width: 15em;
+    height: 15em;
+    /* background: red; */
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    animation: round 10s linear infinite;
+}
+
+@keyframes round{
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+div{
+    display: flex;
+    align-items: center;
+    transform: rotate(calc(var(--n) - 1) * 60deg);
+    background-color: currentColor;
+    border-radius: 0.05em;
+    position: absolute;
+    width: 0.1em;
+    height: 2em;
+    transform-origin: bottom;
+}
+
+div span:nth-child(1){--n:1}
+div span:nth-child(2){--n:2}
+div span:nth-child(3){--n:3}
+div span:nth-child(4){--n:4}
+div span:nth-child(5){--n:5}
+
+div span:nth-child(1){
+    width: 0.5em;
+    height: 02em;
+    background-color: currentColor;
+    border-radius: 50%;
+}
+
+div span:nth-child(2),
+div span:nth-child(3),
+div span:nth-child(4),
+div span:nth-child(5){
+    width: var(--side-lenght);
+    height: var(--side-lenght);
+    border: 0.1em solid;
+    border-radius: 0.05em;
+    border-style: none solid none;
+    transform: rotate(45deg);
+}
+
+div span:nth-child(2){--side-length: 0.5em}
+div span:nth-child(3){--side-length: 0.4em}
+div span:nth-child(4){--side-length: 0.3em}
+div span:nth-child(5){--side-length: 0.3em}
+
+div span:nth-child(2){
+    margin-top: -0.2em;
+}
