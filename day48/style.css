@@ -1,0 +1,107 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: aquamarine;
+    height: 100vh;
+    width: 100%;
+}
+
+
+.hand{
+    width: 16em;
+    height: 8em;
+    color: darksalmon;
+    position: relative;
+}
+
+.hand::before{
+    position: absolute;
+    width: 14em;
+    height: 4.5em;
+    background-color: black;
+}
+
+.palm{
+    position: absolute;
+    width: 8em;
+    height: 6em;
+    background-color: currentColor;
+    border-radius: 1em 4em;
+    right: 0;
+}
+
+.thumb{
+    position: absolute;
+    width: 9.6em;
+    height: 3.2em;
+    background-color: currentColor;
+    border-radius: 3em 2em 2em 1em;
+    right: 0;
+    bottom: 1em;
+    transform: rotate(-20deg);
+    border-bottom: 0.2em solid rgba(0,0,0,0.1);
+    border-left: 0.2em solid rgba(0,0,0,0.1);
+    transform-origin: calc(100% - 2em) 2em;
+}
+
+.thumb::before{
+    content: '';
+    position: absolute;
+    height: 1.8em;
+    width: 1.9em;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 60% 10% 10% 30%;
+    bottom: -0.3em;
+    left: 0.5em;
+    border-right: 0.1em solid rgba(0,0,0,0.1);
+}
+
+.finger:not(:first-child){
+    position: absolute;
+    width: 6.4em;
+    height: 3.5em;
+    background-color: currentColor;
+    right: 5.2em;
+    bottom: 4em;
+    transform-origin: 100% 2em;
+    transform: rotate(10deg);
+    --scale: calc(1 - (5 - var(--n)) * 0.2);
+    transform: rotate(10deg) scale(var(--scale));
+    animation: upper 1.2s ease infinite;
+    animation-delay: calc((var(--n) - 2) * 0.1s);
+}
+
+.finger:not(:first-child)::before{
+    content: '';
+    position: absolute;
+    height: 3em;
+    width: 9em;
+    background-color: currentColor;
+    right: 4.2em;
+    top: 0.2em;
+    border-radius: 2em;
+    transform-origin: calc(100% - 2em) 2em;
+    transform: rotate(-60deg);
+}
+
+@keyframes upper{
+    0%,50%,100%{
+        transform: rotate(10deg) scale(var(--scale));
+    }
+    40%{
+        transform: rotate(50deg) ;
+    }
+}
+
+.finger:nth-child(2){--n:2}
+.finger:nth-child(3){--n:3}
+.finger:nth-child(4){--n:4}
+.finger:nth-child(5){--n:5}
